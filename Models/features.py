@@ -1,7 +1,7 @@
 def giveNumBadWords(sentence, badWordList):
 	counter = 0
-	for word in sentence:
-		if word in badWordList:
+	for badWord in badWordList:
+		if badWord in sentence:
 			counter += 1
 	return counter
 
