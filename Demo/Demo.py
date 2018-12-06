@@ -112,8 +112,8 @@ class App(QMainWindow):
         # Create a button in the window
         self.button = QPushButton('Calc. Probability', self)
         self.button.move(wi-100, a + 80)
- 
-        # connect button to function on_click
+        # connect button to function on_click (even when we press enter)
+        self.textbox.returnPressed.connect(self.button.click)
         self.button.clicked.connect(self.on_click)
         self.show()
  
